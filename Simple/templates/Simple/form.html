@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add | informations</title>
+</head>
+<body>
+
+    <form action="{% url 'addrecord' %}" method="POST">
+        {% csrf_token %}
+    
+        <input type="text" name="fistname" placeholder="First name: ">
+        <input type="text" name="secondname" placeholder="Second name: ">
+        <input type="email" name="email" placeholder="Email: ">
+        <input type="text" name="Location"  placeholder="Location: ">
+        <input type="submit" value="Register">
+    </form>
+    
+</body>
+</html>

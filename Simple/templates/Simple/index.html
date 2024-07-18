@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new | project | ora </title>
+</head>
+<style>
+    th,td{
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+
+  <div>
+    <table>
+
+        <tr>
+            <th>S/N</th>
+            <th>First name</th>
+            <th>Second name </th>
+            <th>Email</th>
+            <th>Location</th>
+            <th>Action</th>
+            <th>Action</th>
+          </tr>
+          {% for x in user %}
+          <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.first_name}}</td>
+            <td>{{x.second_name}}</td>
+            <td>{{x.email}}</td>
+            <td>{{x.location}}</td>
+            <td>
+                <a href="delete/{{x.id}}">
+                    <button>Delete</button>
+                </a>
+            </td>
+            <td>
+                <a href="update/{{x.id}}">
+                    <button>update</button>
+                </a>
+            </td>
+          
+          </tr>
+        
+        {% endfor %}
+    </table>
+  <a href="{% url 'addrecord' %}">
+    <button>Add infromations</button>
+  </a>
+  </div>
+    
+</body>
+</html>

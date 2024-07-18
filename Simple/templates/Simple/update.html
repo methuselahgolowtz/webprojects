@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update | informations</title>
+</head>
+<body>
+    
+    <form action="{% url 'uprecord' user.id %}" method="post">
+    {% csrf_token %}
+
+    <input type="text" placeholder="Fist name: " value="{{user.first_name}}" name="fistname">
+    <input type="text" placeholder="Second name: " value="{{user.second_name}}" name="secondname">
+    <input type="text" placeholder="Email: " value="{{user.email}}" name="email">
+    <input type="text" placeholder="Location: ": " value="{{user.location}}" name="Location">
+    <input type="submit" value="Update">
+    </form>
+
+</body>
+</html>
